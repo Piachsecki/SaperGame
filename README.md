@@ -1,19 +1,31 @@
 # SaperGame
 
-# 1 Description
+# Description
 This project is a MineSweeper GUI game for the Embedded Robotics field of study,
 OOP class on the Wroclaw University of Science and Technology. It requires the basic knowledge of the 
 Object Oriented concepts such as polymphorism and inheritatance.
 
-#2 Features used :
+# Features used :
 - UNIT TESTS
 - LOMBOK
 - SWING LIBRARY
 - JAVADOC DOCUMENTATION
 - GRADLE
 
-#3 The view of the game:
+# The view of the game:
 
 ###  Starting point
-![starting point](https://raw.githubusercontent.com/Piachsecki/SaperGame/master/ending%20game%20won.png)
+![starting point](https://github.com/Piachsecki/SaperGame/blob/master/starting%20point.png)
+
+###  Middle of the game 
+![middle of the game](https://github.com/Piachsecki/SaperGame/blob/master/middle%20of%20the%20game.png)
+
+
+###  Game lost 
+![game lost](https://github.com/Piachsecki/SaperGame/blob/master/ended%20game%20lost.png)
+
+
+###  Game won 
+![game won](https://raw.githubusercontent.com/Piachsecki/SaperGame/master/ending%20game%20won.png)
+
 
