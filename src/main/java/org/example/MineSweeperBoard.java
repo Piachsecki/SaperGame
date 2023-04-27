@@ -8,7 +8,14 @@ import lombok.With;
 import java.math.BigDecimal;
 import java.math.RoundingMode;
 import java.util.Random;
+/**
 
+ This class represents a Minesweeper board which is a 2D array of Field objects. The board
+
+ dimensions and number of mines are determined by the GameMode parameter that is passed in the
+
+ constructor.
+ */
 @Getter
 @Setter
 @With
@@ -18,6 +25,15 @@ public class MineSweeperBoard {
     private final int height;
     private Field[][] board;
     private GameState gameState = GameState.RUNNING;
+    /**
+
+     Constructor that creates a new Minesweeper board with the specified width and height, and
+     initializes each Field object with a false value for hasMine and isRevealed. The number of
+     mines on the board is determined by the GameMode parameter.
+     @param width The width of the Minesweeper board.
+     @param height The height of the Minesweeper board.
+     @param gameMode The GameMode that determines the number of mines on the board.
+     */
 
     public MineSweeperBoard(int width, int height, GameMode gameMode) {
         this.width = width;
@@ -30,22 +46,46 @@ public class MineSweeperBoard {
         }
         initializeFields(gameMode);
     }
+    /**
 
+     Private method that initializes the fields on the Minesweeper board. This method calls
+     the createMines method which sets the specified number of mines on the board according
+     to the GameMode parameter.
+     @param gameMode The GameMode that determines the number of mines on the board.
+     */
     private void initializeFields(GameMode gameMode) {
         createMines(gameMode);
     }
+    /**
+
+     Method that sets the revealed value of the specified field on the Minesweeper board.
+     @param row The row of the field to set the revealed value.
+     @param column The column of the field to set the revealed value.
+     */
 
     public void setFieldRevealedValue(int row, int column) {
         board[row][column].setRevealed(true);
     }
 
-//    public void setFieldMineValue(int row, int column) {
-//        board[row][column].setHasMine(true);
-//    }
+
+    /**
+     * Method that sets the flag value of the specified field on the Minesweeper board.
+     *
+     * @param row       The row of the field to set the flag value.
+     * @param column    The column of the field to set the flag value.
+     */
 
     public void setFieldFlagValue(int row, int column) {
         board[row][column].setHasFlag(true);
     }
+
+    /**
+     * Private method that sets the specified number of mines on the Minesweeper board according
+     * to the GameMode parameter. If GameMode. DEBUG is specified, then a specific set of mines are
+     * set on the board.
+     *
+     * @param gameMode  The GameMode that determines the number of mines on the board.
+     */
 
     private void createMines(GameMode gameMode) {
         BigDecimal howManyMines = BigDecimal.ONE;
@@ -88,6 +128,14 @@ public class MineSweeperBoard {
         }
     }
 
+    /**
+     * Method that displays in console the view of the map
+     * with every initialized field - in a debug mode, so
+     * the programmer is able to check the correctness of
+     * the implemented methods and code.
+     *
+     */
+
 
     public void debug_display() {
         for (int i = 0; i < height ; i++) {
@@ -97,6 +145,16 @@ public class MineSweeperBoard {
             System.out.println();
         }
     }
+    /**
+
+     This method counts the number of mines surrounding a given cell.
+
+     @param row the row of the cell to check
+
+     @param col the column of the cell to check
+
+     @return the number of mines surrounding the cell or -1 if the given cell is out of bounds or not revealed
+     */
 
     public int countMinesAround(int row, int col) {
         int result = 0;
@@ -162,13 +220,13 @@ public class MineSweeperBoard {
             if (board[row][col - 1].isHasMine()) {
                 result++;
             }
-            if (board[row - 1][col - 1].isHasMine()) {
+            if (board[row + 1][col - 1].isHasMine()) {
                 result++;
             }
-            if (board[row - 1][col].isHasMine()) {
+            if (board[row + 1][col].isHasMine()) {
                 result++;
             }
-            if (board[row - 1][col + 1].isHasMine()) {
+            if (board[row + 1][col + 1].isHasMine()) {
                 result++;
             }
             if (board[row][col + 1].isHasMine()) {
@@ -256,7 +314,7 @@ public class MineSweeperBoard {
     }
 
 
-    boolean hasFlag(int row, int col) {
+    public boolean hasFlag(int row, int col) {
         if (
                 row < 0 ||
                         col < 0 ||
@@ -273,11 +331,13 @@ public class MineSweeperBoard {
 
     }
 
-    // if the field at (row,col) was not revealed - change flag status for this field
-    // Do nothing if any of the following is true
-    // - field was already revealed
-    // - either row or col is outside board
-    // - game is already finished
+    /**
+     * Method that is responsible for toggling a Flag on a
+     * specified field, given by the player under some
+     * significant conditions.
+     * @param row
+     * @param col
+     */
     public void toggleFlag(int row, int col) {
         if (
                 !board[row][col].isRevealed() ||
@@ -292,6 +352,13 @@ public class MineSweeperBoard {
             board[row][col].setHasFlag(true);
         }
     }
+    /**
+     * Method that is responsible for revealing a
+     * specified field, given by the player under some
+     * significant conditions.
+     * @param row
+     * @param col
+     */
 
     public void revealField(int row, int col) {
         if (
@@ -313,6 +380,12 @@ public class MineSweeperBoard {
             board[row][col].setRevealed(true);
         }
     }
+
+    /**
+     * Method that is returning the current
+     * Game State of the MineSweeperGame
+     *
+     */
     public GameState getGameState() {
         for (int i = 0; i < height; i++) {
             for (int j = 0; j < width; j++) {
@@ -328,13 +401,19 @@ public class MineSweeperBoard {
 
 
 
-
+/**
+ The GameMode enumeration represents the different modes that a game can have.
+ */
     public enum GameMode {
         DEBUG,
         EASY,
         NORMAL,
         HARD
     }
+/**
+
+ The GameState enumeration represents the different states that a game can be in.
+*/
 
     public enum GameState {
         RUNNING,

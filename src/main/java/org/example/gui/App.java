@@ -25,7 +25,7 @@ public class App extends JFrame implements Runnable {
 
     public static int SPACING = 5;
     private Thread gameThread;
-    //    int FPS = 60;
+
     private ImageIcon flag;
     private ImageIcon mine;
     private ImageIcon revealField;
@@ -57,8 +57,8 @@ public class App extends JFrame implements Runnable {
 
     public void startGameThread() {
 
-        gameThread = new Thread(this); //passing the GamePanel class to this constructor
-        gameThread.start(); // it is calling the run methood
+        gameThread = new Thread(this);
+        gameThread.start();
     }
 
     @Override
@@ -151,10 +151,7 @@ public class App extends JFrame implements Runnable {
                                         j * 50 + SPACING + 10, 20, 20, null);
                             }
                         }
-                    }
-
-
-                     else if (board.getBoard()[i][j].isHasFlag()) {
+                    } else if (board.getBoard()[i][j].isHasFlag()) {
                         g2.drawImage(flag.getImage(), i * 50 + SPACING,
                                 j * 50 + SPACING, 50 - 2 * SPACING, 50 - 2 * SPACING, null);
                     } else {
@@ -170,73 +167,34 @@ public class App extends JFrame implements Runnable {
 
                             String text;
                             int textLength;
-                            int x ;
-                            int y ;
-//                            g2.setFont(ARIAL_80B);
-//                            g2.setColor(Color.YELLOW);
+                            int x;
+                            int y;
                             FontMetrics metrics = g.getFontMetrics(ARIAL_80B);
 
                             text = "Congratulations, you won!";
                             textLength = (int) g2.getFontMetrics().getStringBounds(text, g2).getWidth();
                             x = board.getWidth() * (50 + SPACING - 2) - metrics.stringWidth(text) / 2;
-                            y = (board.getHeight() * (50 + SPACING - 2) + 26 - metrics.getHeight()) /2 + metrics.getAscent();
+                            y = (board.getHeight() * (50 + SPACING - 2) + 26 - metrics.getHeight()) / 2 + metrics.getAscent();
                             g2.drawString(text, x, y);
                         } else if (board.getGameState().equals(MineSweeperBoard.GameState.FINISHED_LOSS)) {
 
-                            int x ;
-                            int y ;
+                            int x;
+                            int y;
                             String text;
                             int textLength;
 
                             text = "You LOST!, aaaaaaaaaaaaaaaaa";
                             textLength = (int) g2.getFontMetrics().getStringBounds(text, g2).getWidth();
 
-                            x = board.getWidth() *20  - textLength/2;
-                            y = (board.getHeight() * (50 + SPACING - 2)  ) /2 + 150;
+                            x = board.getWidth() * 20 - textLength / 2;
+                            y = (board.getHeight() * (50 + SPACING - 2)) / 2 + 150;
                             g2.drawString(text, x, y);
 
                         }
                     }
 
 
-
-//
-//
-//                    if(board.getGameState().equals(MineSweeperBoard.GameState.FINISHED_WIN) ){
-//                        text = "YOU WON, CONGRATULATIONS!";
-//                        textLength = (int)g2.getFontMetrics().getStringBounds(text, g2).getWidth();
-//                        int x = board.getWidth()/2 - textLength/2;
-//                        int y = board.getHeight()/2;
-//                        g2.drawString(text, x, y);
-//                        gameThread = null;
-//                    } else if (board.getGameState().equals(MineSweeperBoard.GameState.FINISHED_LOSS)) {
-//                        text = "YOU LOST!";
-//                        textLength = (int)g2.getFontMetrics().getStringBounds(text, g2).getWidth();
-//                        int x = board.getWidth()/2 - textLength/2;
-//                        int y = board.getHeight()/2;
-//                        g2.drawString(text, x, y);
-//                        gameThread = null;
-//                    }
-
-
                 }
-
-//                    if (temporaryBoard[i][j].isHasFlag()) {
-//                        graphics2D.drawImage(flag.getImage(), i * 50 + SPACING,
-//                                j * 50 + SPACING, 50 - 2 * SPACING, 50 - 2 * SPACING, null);
-//                    } else if (temporaryBoard[i][j].isHasMine()) {
-//                        graphics2D.drawImage(mine.getImage(), i * 50 + SPACING,
-//                                j * 50 + SPACING, 50 - 2 * SPACING, 50 - 2 * SPACING, null);
-//                    } else {
-//                    ms.getXCoordinates()
-
-//                    if(ms.getXCoordinates() >= SPACING + i*50 &&
-//                            ms.getXCoordinates() < i*50 + 50 - 2 *SPACING
-////                            ms.getYCoordinates() >= SPACING + j*50 + 106 &&
-////                            ms.getYCoordinates() < j*50+156-SPACING)
-//                    ){
-//                        graphics2D.setColor(Color.RED);
-//                    }
 
 
             }
@@ -264,7 +222,6 @@ public class App extends JFrame implements Runnable {
         public void mouseClicked(MouseEvent e) {
             if (board.getGameState().equals(MineSweeperBoard.GameState.RUNNING)) {
                 System.out.println("coordinates: [" + xParameterOfABox() + ", " + yParameterOfABox() + "]");
-//                board.debug_display();
                 if (xParameterOfABox() != -1 && yParameterOfABox() != -1 && isLeftMouseButton(e)) {
                     board
                             .setFieldRevealedValue(
@@ -286,7 +243,6 @@ public class App extends JFrame implements Runnable {
                 }
 
             }
-//            gameThread = null;
 
 
 

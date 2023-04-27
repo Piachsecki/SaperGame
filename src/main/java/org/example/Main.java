@@ -11,10 +11,10 @@ public class Main{
 
         MineSweeperBoard board4 = new MineSweeperBoard(10, 10, MineSweeperBoard.GameMode.DEBUG);
 
-        App app = new App(board4);
-        app.startGameThread();
-
-
+//        App app = new App(board4);
+//        app.startGameThread();
+//
+board4.debug_display();
 
     }
 

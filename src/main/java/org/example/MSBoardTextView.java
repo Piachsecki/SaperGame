@@ -3,6 +3,12 @@ package org.example;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 
+/**
+ * The MSBoardTextView class represents the view of the MineSweeper game board.
+ *
+ * It provides a method to display the board to the console.
+ * /
+ */
 @AllArgsConstructor
 @Getter
 
