@@ -12,7 +12,7 @@ Object Oriented concepts such as polymphorism and inheritatance.
 - JAVADOC DOCUMENTATION
 - GRADLE
 
-#Link to the documentation
+# Link to the documentation
 [documentation](http://localhost:63342/SaperGame/javadoc/index.html?_ijt=tb9c4h4ntoten8pdfd5mdlm25s&_ij_reload=RELOAD_ON_SAVE)
 
 # The view of the game:
