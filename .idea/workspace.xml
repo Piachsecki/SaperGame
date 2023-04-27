@@ -4,7 +4,26 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8247731e-c82a-453e-852f-fcc9b50ce57f" name="Changes" comment="" />
+    <list default="true" id="8247731e-c82a-453e-852f-fcc9b50ce57f" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/resources/number1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/number2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/number3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/number7.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/number8.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Field.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Field.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/MSBoardTextView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/MSBoardTextView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/MSTextController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/MSTextController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/MineSweeperBoard.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/MineSweeperBoard.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/gui/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/gui/App.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/bomb.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/flag.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/flag.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/mine_whitebg.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/MineSweeperBoardTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/MineSweeperBoardTest.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -15,8 +34,49 @@
       <ProjectState />
     </projectState>
   </component>
+  <component name="ExternalProjectsManager">
+    <system id="GRADLE">
+      <state>
+        <task path="$PROJECT_DIR$">
+          <activation />
+        </task>
+        <projects_view>
+          <tree_state>
+            <expand>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="SaperGame" type="f1a62948:ProjectNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="SaperGame" type="f1a62948:ProjectNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="SaperGame" type="f1a62948:ProjectNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+                <item name="build" type="c8890929:TasksNode$1" />
+              </path>
+            </expand>
+            <select />
+          </tree_state>
+        </projects_view>
+      </state>
+    </system>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
   </component>
   <component name="ProjectId" id="2OdqspDassM92IIjQy2HzTM1q9W" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -28,9 +88,36 @@
   "keyToString": {
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false"
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "C:/Users/krpia/SaperGame/src/main/resources",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0",
+    "settings.editor.selected.configurable": "editor.preferences.completion"
   }
 }]]></component>
+  <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="org.example" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\krpia\SaperGame\src\main\resources" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\krpia\SaperGame\src\main\resources" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="SaperGame" type="Application" factoryName="Application">
+      <option name="ALTERNATIVE_JRE_PATH" value="corretto-17" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
+      <option name="MAIN_CLASS_NAME" value="org.example.Main" />
+      <module name="SaperGame.main" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -39,8 +126,20 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1681901019342</updated>
+      <workItem from="1681901021415" duration="24042000" />
+      <workItem from="1681989819170" duration="1294000" />
+      <workItem from="1682009056228" duration="5399000" />
+      <workItem from="1682066399599" duration="10291000" />
+      <workItem from="1682089543057" duration="30542000" />
+      <workItem from="1682237984812" duration="16241000" />
+      <workItem from="1682316080633" duration="64000" />
+      <workItem from="1682531095421" duration="10417000" />
+      <workItem from="1682581151309" duration="8664000" />
     </task>
     <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
